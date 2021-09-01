@@ -2,19 +2,17 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/MuzzleFlash0.tga-c425058dfb7beba298656119b0e84138.s3tc.stex"
-path.etc2="res://.import/MuzzleFlash0.tga-c425058dfb7beba298656119b0e84138.etc2.stex"
+valid=false
 
 [deps]
 
 source_file="res://Assets/Images/MuzzleFlashes/MuzzleFlash0.tga"
-dest_files=[ "res://.import/MuzzleFlash0.tga-c425058dfb7beba298656119b0e84138.s3tc.stex", "res://.import/MuzzleFlash0.tga-c425058dfb7beba298656119b0e84138.etc2.stex" ]
-
 [params]
 
 compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=1
 flags/filter=false
@@ -24,6 +22,7 @@ flags/srgb=2
 process/fix_alpha_border=false
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=false
