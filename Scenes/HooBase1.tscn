@@ -16,7 +16,7 @@ script = ExtResource( 1 )
 [node name="Level" type="Node" parent="."]
 
 [node name="AmmoBox" parent="Level" instance=ExtResource( 3 )]
-transform = Transform( -0.0310742, 0, 0.69931, 0, 0.7, 0, -0.69931, 0, -0.0310742, 28.6383, -1, 18.033 )
+transform = Transform( -0.0310742, 0, 0.69931, 0, 0.7, 0, -0.69931, 0, -0.0310742, 27.6452, -1, 18.033 )
 type = 0
 amount = 50
 
@@ -24,14 +24,13 @@ amount = 50
 transform = Transform( -0.0310742, 0, 0.69931, 0, 0.7, 0, -0.69931, 0, -0.0310742, 28.433, -1, 20.7095 )
 
 [node name="Shotgun_Collect" parent="Level" instance=ExtResource( 5 )]
-transform = Transform( -0.0310742, 0, 0.69931, 0, 0.7, 0, -0.69931, 0, -0.0310742, 30.1777, -0.132031, 17.3761 )
-_sections_unfolded = [ "Collision", "Transform" ]
+transform = Transform( -0.0310742, 0, 0.69931, 0, 0.7, 0, -0.69931, 0, -0.0310742, 27.7066, -0.132031, 17.3761 )
 
 [node name="MiniGun_Collect" parent="Level" instance=ExtResource( 6 )]
 transform = Transform( -0.050451, 0, 0.69818, 0, 0.7, 0, -0.69818, 0, -0.050451, 27.8773, -0.540147, 24.7962 )
 
 [node name="Base" parent="Level" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.51527, -1.12623, 3.11808 )
 
 [node name="StartSpawn" type="Position3D" parent="."]
-transform = Transform( -0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, -0.939693, 31.4901, -0.261645, 9.99744 )
-
+transform = Transform( -0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, -0.939693, 25.1031, 5.37727, 25.3544 )

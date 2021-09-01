@@ -31,16 +31,16 @@ func take_damage(damage):
 func _ready():
 	navigation = get_node("/root/World/Level/Navigation")
 	$ShootTimer.connect("timeout", self, "_on_shoot_timer")
-	set_state(IDLE)
+	set_state(STATES.IDLE)
 
 func set_state(new_state):
 	if state == new_state:
 		return
-	if new_state == IDLE:
+	if new_state == STATES.IDLE:
 		print("idle!")
 		$AnimationPlayer.playback_speed = 1
 		$AnimationPlayer.play("idle-loop")
-	if new_state == ATTACK:
+	if new_state == STATES.ATTACK:
 		print("attack!")
 		$AnimationPlayer.playback_speed = 2
 		$AnimationPlayer.play("walk_2-loop")
@@ -60,12 +60,12 @@ func _on_shoot_timer():
 
 
 func _physics_process(delta):
-	if state == IDLE:
+	if state == STATES.IDLE:
 		var length = (global_transform.origin - Player.player.global_transform.origin).length()
 		var to_player = global_transform.origin - Player.player.global_transform.origin
 		if length < 8 and transform.basis.z.dot(to_player.normalized()) > .4 :
-			set_state(ATTACK)
-	if state == ATTACK:
+			set_state(STATES.ATTACK)
+	if state == STATES.ATTACK:
 		turn(delta)
 		var path = navigation.get_simple_path(transform.origin, Player.player.global_transform.origin)
 		if path.size()>0:
@@ -79,7 +79,7 @@ func turn(delta):
 
 func _process(delta):
 	if Input.is_action_just_pressed("go_grunt"):
-		set_state(ATTACK)
+		set_state(STATES.ATTACK)
 	if Input.is_action_just_pressed("patrol_grunt"):
-		set_state(IDLE)
+		set_state(STATES.IDLE)
 
